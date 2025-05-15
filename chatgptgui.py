@@ -5,8 +5,7 @@
 # If an error occurs (e.g., network issues, invalid API key), a message box will display the error message.
 # Save Chat History: A "Save Chat History" button has been added. When clicked, it saves the chat history
 # to a file named chat_history.txt. If there is no chat history, it will show a warning message.
-# pip install openai
-# chmod 775 this file and python3 ./chatgptgui.py
+# pip install openai     chmod 775 this file and python3 ./chatgptgui.py
 
 import tkinter as tk
 from tkinter import scrolledtext, messagebox

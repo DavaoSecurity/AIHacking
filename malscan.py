@@ -8,7 +8,7 @@
 # Performance: The use of threading can significantly speed up the scanning process, especially for large directories with many files.
 # Legal and Ethical Considerations: Ensure you have permission to scan the files and that you comply with all relevant laws and regulations.
 # https://bazaar.abuse.ch/api/  to get API
-# pip install requests
+# pip install requests and best run in Kali Linux
 # Replace "your_api_key_here" with your actual API key from Malware Bazaar.
 # Save the code to a file, e.g., malware_detector.py. CHMOD FILE!!
 # Run the script using Python: python malware_detector.py.
