@@ -1,2 +1,2 @@
 # AIHacking
-Scripts using ChatGPT, amangst others.
+Scripts using ChatGPT, amongst others, by Nathan W Jones for EC-Council ECE Credits.
