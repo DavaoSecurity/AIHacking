@@ -1,4 +1,4 @@
-# Hyperion v4 Malware Checker in Python
+# Hyperion v4 Malware Checker in Python by Nathan W Jones nat@davaosecurity.com
 # Hash Calculation: The get_file_hash function computes the SHA256 hash of a file.
 # Malware Check: The check_malware function sends a request to the Malware Bazaar API to check if the hash is known to be malicious.
 # File Scanning: The scan_file function scans a single file and prints whether it is clean or detected as malware.

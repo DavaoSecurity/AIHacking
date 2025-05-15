@@ -1,5 +1,5 @@
 # pip install requests
-# Hyperion v4 NIST Vulnerability
+# Hyperion v4 NIST Vulnerability by Nathan W Jones nat@davaosecurity.com
 # python3 nist.py
 
 import requests
