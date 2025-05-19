@@ -1,0 +1,49 @@
+# pip install requests
+# Written by Nathan W Jones nat@davaosecurity.com
+# Initialization: The CVEVulnerabilityScanner class initializes with the base URL for the CVE API.
+# Fetching CVE Data: The get_cve_data method fetches CVE data for a given software name.
+# Checking Vulnerabilities: The check_vulnerabilities method checks if the specified version of the software has any known vulnerabilities.
+# Reporting: The report_vulnerabilities method prints out any found vulnerabilities.
+
+import requests
+
+class CVEVulnerabilityScanner:
+    def __init__(self):
+        self.cve_base_url = "https://cve.circl.lu/api"
+
+    def get_cve_data(self, software_name, version):
+        # Fetch CVE data for the specified software
+        response = requests.get(f"{self.cve_base_url}/search/{software_name}")
+        if response.status_code == 200:
+            return response.json()
+        else:
+            print("Error fetching CVE data.")
+            return None
+
+    def check_vulnerabilities(self, software_name, version):
+        cve_data = self.get_cve_data(software_name, version)
+        if cve_data:
+            vulnerabilities = []
+            for cve in cve_data:
+                if 'affects' in cve and 'version' in cve['affects']:
+                    for affected_version in cve['affects']['version']:
+                        if affected_version == version:
+                            vulnerabilities.append(cve)
+            return vulnerabilities
+        return []
+
+    def report_vulnerabilities(self, vulnerabilities):
+        if vulnerabilities:
+            print(f"Found {len(vulnerabilities)} vulnerabilities:")
+            for v in vulnerabilities:
+                print(f"CVE ID: {v['id']}, Description: {v['summary']}")
+        else:
+            print("No vulnerabilities found.")
+
+if __name__ == "__main__":
+    scanner = CVEVulnerabilityScanner()
+    software_name = input("Enter the software name: ")
+    version = input("Enter the software version: ")
+    
+    vulnerabilities = scanner.check_vulnerabilities(software_name, version)
+    scanner.report_vulnerabilities(vulnerabilities)
