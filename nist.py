@@ -1,6 +1,6 @@
 # pip install requests
 # Hyperion v4 NIST Vulnerability by Nathan W Jones nat@davaosecurity.com
-# could do the same script for CVE
+# could do the same script for CVE database
 # python3 nist.py
 
 import requests

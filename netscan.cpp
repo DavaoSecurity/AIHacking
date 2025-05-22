@@ -1,4 +1,4 @@
-// C++ implementaion netowrk scanner written by Nathan W Jone nat@davaosecurity.com
+// C++ implementaion netowrk scanner written by Nathan W Jone nat@davaosecurity.com for ECE Credits
 // g++ -o port_scanner port_scanner.cpp     ./port_scanner
 // This code is a basic implementation and may not handle all edge cases or errors robustly.
 // Scanning ports can be considered intrusive; ensure you have permission to scan the target IP address.

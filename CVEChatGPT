@@ -1,5 +1,5 @@
 # pip install requests
-# Written by Nathan W Jones nat@davaosecurity.com
+# Written by Nathan W Jones nat@davaosecurity.com for ECE Credits
 # Initialization: The CVEVulnerabilityScanner class initializes with the base URL for the CVE API.
 # Fetching CVE Data: The get_cve_data method fetches CVE data for a given software name.
 # Checking Vulnerabilities: The check_vulnerabilities method checks if the specified version of the software has any known vulnerabilities.
@@ -44,6 +44,6 @@ if __name__ == "__main__":
     scanner = CVEVulnerabilityScanner()
     software_name = input("Enter the software name: ")
     version = input("Enter the software version: ")
-    
+
     vulnerabilities = scanner.check_vulnerabilities(software_name, version)
     scanner.report_vulnerabilities(vulnerabilities)
